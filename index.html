@@ -11,29 +11,33 @@
     <link rel="stylesheet" href="src/css.css">
   </head>
   <body class="bg-gray-100 roboto-regular">
-    <div class="w-2/3 m-auto mt-20 p-10 border border-solid-indigo-success rounded-lg bg-white shadow-lg">
+    <div class="w-2/3 m-auto mt-20 p-5 border border-solid-indigo-success rounded-lg bg-white shadow-lg">
       <header>
         <div>
           <img class="m-auto wxy-20 h-10 " src="images/shecodes.png" alt="">
         </div>
         <div class="mt-5 mb-8">
-          <input class="p-3 w-2/3 rounded-lg bg-indigo-50 border active:hover:border-indigo-50" type="search" placeholder="Enter a city ...">
-          <input class="p-3 rounded-lg bg-indigo-50" type="submit" type="search">
+          <form class="search" action="">
+            <input class="input p-3 w-3/4 rounded-lg bg-indigo-50 border hover:border-indigo-50 active:border-indigo-50" type="search" placeholder="Enter a city ...">
+            <input class="  cursor-pointer p-3 rounded-lg bg-indigo-50" type="submit" value="search">
+          </form>
         </div>
       </header>
       <hr>
-      <section class="flex py-3 mt-3">
-        <div class="mr-8">
+      <section class="flex py-2 mt-3">
+        <div class="mr-10">
           <div class="mb-4">
-            <h1 class="text-4xl font-bold" >Paris</h1>
+            <h1 class=" city text-4xl font-bold" >Paris</h1>
           </div>
-          <div>
+          <div class="text-gray-400">
             <div><span>Tusday 5:52,</span><span>moderate rain</span></div>
             <div>Humidity: <strong class="text-red-600">87%</strong>, Wind: <strong class="text-red-600">7.2km/h</strong></div>
           </div>
         </div>
-        <div class="relative">
-          <p><strong class="text-8xl font-bold">☀️12</strong><strong class="absolute top-5 start-0">°c</strong></p>
+        <div class="relative flex">
+          <div class="text-4xl relative top-7 start-0">☀️</div>
+          <div><p class="text-8xl font-bold">2</p></div>
+          <div><p class="relative top-3 start-0 ">°c</p></div>
         </div>
       </section>
       <footer class="mt-5 ml-5 ">
@@ -43,5 +47,6 @@
           and <a class="underline" href="file:///C:/Users/hp/Desktop/wheather-application/index.html">hosted on Netlify</a></p>
       </footer>
     </div>
+    <script src="src/js.js"></script>
   </body>
 </html>
