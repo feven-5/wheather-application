@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My weather application</title>
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100 font-f">
+    <div class="w-2/3 m-auto mt-7 p-3 border border-solid-indigo-success rounded bg-white">
+      <header>
+        <div>
+          <img src="#" alt="">
+        </div>
+        <div class="mt-3 mb-3">
+          <input class="p-2 pr-15 rounded-lg bg-indigo-50" type="search" placeholder="Enter a city ...">
+          <input class="p-2 rounded-lg bg-indigo-50" type="submit" type="search">
+        </div>
+      </header>
+      <section class="flex py-3">
+        <div class="pr-8">
+          <div class="pb-6">
+            <h1 class="text-4xl font-bold" >Paris</h1>
+          </div>
+          <div>
+            <div><span>Tusday 5:52,</span><span>moderate rain</span></div>
+            <div>Humidity: <strong class="text-red-600">87%</strong>, Wind: <strong class="text-red-600">7.2km/h</strong></div>
+          </div>
+        </div>
+        <div class="relative">
+          <p><strong class="text-8xl font-bold">☀️12</strong><span class="top-2">°c</span></p>
+        </div>
+      </section>
+      <footer class="mt-3">
+        <p>The Project was coded by <a href="#">Shecodes</a> and is <a href="#">open-sourced on Githab</a> and <a href="#">hosted on Netlify</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
