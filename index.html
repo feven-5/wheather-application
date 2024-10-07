@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My weather application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css.css">
   </head>
-  <body class="bg-gray-100 font-f">
-    <div class="w-2/3 m-auto mt-7 p-3 border border-solid-indigo-success rounded bg-white">
+  <body class="bg-gray-100 roboto-regular">
+    <div class="w-2/3 m-auto mt-20 p-10 border border-solid-indigo-success rounded-lg bg-white shadow-lg">
       <header>
         <div>
-          <img src="#" alt="">
+          <img class="m-auto wxy-20 h-10 " src="images/shecodes.png" alt="">
         </div>
-        <div class="mt-3 mb-3">
-          <input class="p-2 pr-15 rounded-lg bg-indigo-50" type="search" placeholder="Enter a city ...">
-          <input class="p-2 rounded-lg bg-indigo-50" type="submit" type="search">
+        <div class="mt-5 mb-8">
+          <input class="p-3 w-2/3 rounded-lg bg-indigo-50 border active:hover:border-indigo-50" type="search" placeholder="Enter a city ...">
+          <input class="p-3 rounded-lg bg-indigo-50" type="submit" type="search">
         </div>
       </header>
-      <section class="flex py-3">
-        <div class="pr-8">
-          <div class="pb-6">
+      <hr>
+      <section class="flex py-3 mt-3">
+        <div class="mr-8">
+          <div class="mb-4">
             <h1 class="text-4xl font-bold" >Paris</h1>
           </div>
           <div>
@@ -28,11 +33,14 @@
           </div>
         </div>
         <div class="relative">
-          <p><strong class="text-8xl font-bold">☀️12</strong><span class="top-2">°c</span></p>
+          <p><strong class="text-8xl font-bold">☀️12</strong><strong class="absolute top-5 start-0">°c</strong></p>
         </div>
       </section>
-      <footer class="mt-3">
-        <p>The Project was coded by <a href="#">Shecodes</a> and is <a href="#">open-sourced on Githab</a> and <a href="#">hosted on Netlify</a></p>
+      <footer class="mt-5 ml-5 ">
+        <p class="text-gray-400">The Project was 
+          coded by <a class="underline" href="file:///C:/Users/hp/Desktop/wheather-application/index.html">
+          Shecodes</a> and is <a class="underline" href="file:///C:/Users/hp/Desktop/wheather-application/index.html">open-sourced on Githab</a> 
+          and <a class="underline" href="file:///C:/Users/hp/Desktop/wheather-application/index.html">hosted on Netlify</a></p>
       </footer>
     </div>
   </body>
