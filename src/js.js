@@ -16,10 +16,10 @@ function refreshWeather(response) {
   let time = document.querySelector(".time");
   let date = new Date(response.data.time*1000);
   time.innerHTML = formatDate(date);
-  console.log(response.data);
   let iconElement = document.querySelector(".icon");
   let icon = `<img src="${response.data.condition.icon_url}" class="broken-clouds-night">`;
   iconElement.innerHTML = icon;
+
 }
 function formatDate(date){
   let hour = date.getHours();
