@@ -48,26 +48,33 @@ function handleSearchSubmit(event) {
 
 function getForecast(city) {
   let apiKey = "b2a5adcct04b33178913oc335f405433";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
   axios(apiUrl).then(Forecast);
+}
+function formatDay(timestemp){
+  let date = new Date(timestemp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()]
 }
 function Forecast(response){
   console.log(response.data);
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"]
   let conforcast = document.querySelector(".weather-forecast");
-  forcastHtml = "";
-  days.forEach(function(day){
-    forcastHtml += `
+  let forcastHtml = "";
+  response.data.daily.forEach(function(day, index){
+    if(index < 5){
+      forcastHtml += `
       <div class="">
-        <div class="text-center text-gray-400">${day}</div>
-        <div class="text-center my-2 text-xl"><img src = "${response.data.condition.icon_url}" class = "clear-sky-day"></div>
+        <div class="text-center text-gray-400">${formatDay(day.time)}</div>
+        <div class="text-center my-2 text-xl"><img src="${day.condition.icon_url}"></div>
         <div class="flex justify-center text-pink-500">
           <div class="pr-1">
-            <strong>15°</strong>
+            <strong>${Math.round(day.temperature.minimum)}°</strong>
           </div>
-          <div class="pl-1">9°</div>
+          <div class="pl-1">${Math.round(day.temperature.maximum)}°</div>
         </div>
       </div>`;
+    }
   });
   conforcast.innerHTML = forcastHtml;
 }
