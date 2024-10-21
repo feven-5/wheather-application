@@ -66,7 +66,7 @@ function Forecast(response){
       forcastHtml += `
       <div class="">
         <div class="text-center text-gray-400">${formatDay(day.time)}</div>
-        <div class="text-center my-2 text-xl"><img src="${day.condition.icon_url}"></div>
+        <div class="text-center my-2 text-xl "><img class="w-16" src="${day.condition.icon_url}"></div>
         <div class="flex justify-center text-pink-500">
           <div class="pr-1">
             <strong>${Math.round(day.temperature.minimum)}°</strong>
