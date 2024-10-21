@@ -25,20 +25,30 @@
         </div>
       </header>
       <hr>
-      <section class="flex py-2 mt-3">
-        <div class="mr-10">
-          <div class="mb-4">
-            <h1 class=" city text-4xl font-bold" ></h1>
+      <section class="py-2 mt-3">
+        <div class="flex">
+          <div class="mr-10">
+            <div class="mb-4">
+              <h1 class=" city text-4xl font-bold"></h1>
+            </div>
+            <div class="text-gray-400">
+              <div><span class="time"> </span><span class="description"></span></div>
+              <div>Humidity: <strong class="humidity text-red-600"> </strong>, Wind: <strong
+                  class="wind text-red-600"></strong>
+              </div>
+            </div>
           </div>
-          <div class="text-gray-400">
-            <div><span class="time"> </span><span class="description"></span></div>
-            <div>Humidity: <strong class="humidity text-red-600"> </strong>, Wind: <strong class="wind text-red-600"></strong></div>
+          <div class="relative flex">
+            <div class="icon text-4xl relative top-2 start-0"></div>
+            <div>
+              <p id="temperature" class="text-8xl font-bold"></p>
+            </div>
+            <div>
+              <p class="relative top-3 start-0 ">°c</p>
+            </div>
           </div>
         </div>
-        <div class="relative flex">
-          <div class="icon text-4xl relative top-2 start-0"></div>
-          <div><p id="temperature" class=" text-8xl font-bold"></p></div>
-          <div><p class="relative top-3 start-0 ">°c</p></div>
+        <div class="weather-forecast text-gray-400 flex justify-between mt-8">
         </div>
       </section>
       <footer class="mt-5 ml-5 ">
