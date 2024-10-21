@@ -20,6 +20,7 @@ function refreshWeather(response) {
   let icon = `<img src="${response.data.condition.icon_url}" class="broken-clouds-night">`;
   iconElement.innerHTML = icon;
 
+  getForecast(response.data.city);
 }
 function formatDate(date){
   let hour = date.getHours();
@@ -45,11 +46,13 @@ function handleSearchSubmit(event) {
   searchCity(Input.value);
 }
 
-let searchElement = document.querySelector(".search");
-searchElement.addEventListener("submit", handleSearchSubmit);
-
-searchCity("Paris");
-function Forecast(){
+function getForecast(city) {
+  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios(apiUrl).then(Forecast);
+}
+function Forecast(response){
+  console.log(response.data);
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"]
   let conforcast = document.querySelector(".weather-forecast");
   forcastHtml = "";
@@ -57,7 +60,7 @@ function Forecast(){
     forcastHtml += `
       <div class="">
         <div class="text-center text-gray-400">${day}</div>
-        <div class="text-center my-2 text-xl">⛅</div>
+        <div class="text-center my-2 text-xl"><img src = "${response.data.condition.icon_url}" class = "clear-sky-day"></div>
         <div class="flex justify-center text-pink-500">
           <div class="pr-1">
             <strong>15°</strong>
@@ -68,4 +71,6 @@ function Forecast(){
   });
   conforcast.innerHTML = forcastHtml;
 }
-Forecast()
+let searchElement = document.querySelector(".search");
+searchElement.addEventListener("submit", handleSearchSubmit);
+searchCity("Paris");
